@@ -1,0 +1,32 @@
+[
+    {
+        "id": "20230523_1",
+        "processors": [
+            { 
+                "filters": [
+                  {
+                    "exact": {
+                      "data.body.type": "product.created"
+                    }
+                  }
+                ],
+                "transformer": {
+                    "define": {
+                        "time": "$.time",
+                        "product_name": "$.data.body.data.object.name",
+                        "product_id": "$.data.body.data.object.id",
+                        "Price": "$.data.body.data.object.default_price"
+                    },
+                    "templateJson": {
+                        "body": {
+                            "product_id": "<product_id>",
+                            "product_name": "<product_name>",
+                            "Price": "<Price>",
+                            "time": "<time>"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]

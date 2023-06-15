@@ -241,5 +241,41 @@
         description: "Receive real-time notification on slack when an order is cancelled.",
         subTitle: "Shopify order cancelled event triggers a slack message",
         id: "20230608_3",
-    }
+    },
+
+    {
+        sinkIcon: "mysql",
+        source: "stripe",
+        sink: "mysql",
+        description: "Receive real-time notification on MySQL when a Stripe product is created.",
+        subTitle: "Stripe product created event triggers a new row on MySQL",
+        id: "20230523_2",
+},
+
+{
+        sinkIcon: "snowflake",
+        source: "stripe",
+        sink: "snowflake",
+        description: "Receive real-time notification on Snowflake when a Stripe product is created.",
+        subTitle: "Stripe product created event triggers a new row on Snowflake",
+        id: "20230523_2",
+},
+
+{
+        sinkIcon: "mysql",
+        source: "stripe",
+        sink: "mysql",
+        description: "Receive real-time notification on MySQL stating the ending cash balance of the customer",
+        subTitle: "Stripe cash balance event triggers a new row on MySQL",
+        id: "20230523_2",
+},
+
+{
+        sinkIcon: "snowflake",
+        source: "stripe",
+        sink: "snowflake",
+        description: "Receive real-time notification on Snowflake stating the ending cash balance of the customer.",
+        subTitle: "Stripe product created event triggers a new row on Snowflake",
+        id: "20230523_2",
+},
 ];
